@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TasksSimplified</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <!-- HTML Live Session - Module 1 & Module 2 - Shared screen with speaker view (Khosro)
 
     6 Day Structure
@@ -14,10 +14,129 @@
     6. React Lecture
     This course will take you through building a complete task management application from scratch.
     -->
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header>
+      <div class="logo">
+        <img src="./assets/logo.png" alt="TasksSimplified Logo" />
+        TasksSimplified
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search your task here..."
+        />
+        <button class="search-button">
+          <svg width="16" height="16"></svg>
+          svg
+        </button>
+      </div>
+      <div class="date-display">
+        <div class="day" id="currentDay">Tuesday</div>
+        <div class="full-date" id="currentDate">20/06/23</div>
+      </div>
+    </header>
 
+    <!-- MAIN CONTAINER STRUCTURE -->
 
-</head>
-<body>
+    <div class="container">
+      CONTAINER
+      <!-- SIDEBAR WITH PROFILE -->
+      <div class="sidebar">
+        SIDEBAR
+        <div class="profile">
+          PROFILE
+          <div class="profile-img">
+            <img src="./assets/profile.jpg" alt="Profile pic" />
+          </div>
+          <div class="profile-name">Bella Whiskers</div>
+          <div class="profile-email">bella@meow.com</div>
+        </div>
+        <button class="sidebar-button">
+          <svg width="16" height="16"></svg>
+          svg
+        </button>
+        My Tasks
+      </div>
+
+      <!-- MAIN CONTENT AREA -->
+      <div class="main-content">
+        <!-- TASK COLUMN -->
+        <div class="tasks-column">
+            <div class="column-header-container">
+                <h2 class="column-header">My Tasks</h2>
+                <button class="add-task-circle-btn" id="addTaskBtn">
+                              <svg width="16" height="16"></svg>
+                              svg
+                </button>
+            </div>
+            <div class="tasks-wrapper">
+                <!-- Task cards will be generated here by js -->
+            </div>
+        </div>
     
-</body>
+           <!-- TASK DETAILS PANEL -->
+       <div class="task-details">
+        <!-- Task details panel will be shown here by js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TASK MODAL -->
+     <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Task</h2>
+                <a href="#" class="go-back" id="closeModalBtn">Go Back</a>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="taskTitle">Title</label>
+                    <input type="text" id="taskTitle" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <label for="taskDate">Date</label>
+                    <div class="date-input-container">
+                        <input type="text" id="taskDate" class="form-input" />
+                        <span class="calendar-icon">svg</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Priority</label>
+                    <div class="priority-options">
+                        <div class="priority-option">
+                            <span class="priority-dot extreme"></span>
+                            <span>Extreme</span>
+                            <input type="radio" name="priority" value="extreme" /> 
+                        </div>
+                        <div class="priority-option">
+                            <span class="priority-dot moderate"></span>
+                            <span>Moderate</span>
+                            <input type="radio" name="priority" value="moderate" /> 
+                        </div>
+                        <div class="priority-option">
+                            <span class="priority-dot low"></span>
+                            <span>Low</span>
+                            <input type="radio" name="priority" value="low" checked /> 
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Task Description</label>
+                    <textarea 
+                    id="taskDescription"
+                    class="textarea-input"
+                    placeholder="Start writing here...">
+                </textarea>
+                </div>
+                <button class="done-btn" id="saveTaskBtn">Done</button>
+            </div>
+        </div>
+     </div>
+
+
+<script src="script.js"></script>
+  </body>
 </html>
